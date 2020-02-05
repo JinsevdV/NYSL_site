@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <link rel="stylesheet" type="text/css" href="../styles.css"/>
+    <title>Northside Youth Soccer League</title>
+  </head>   
+  <body>
+    <div id="wrapper">
+  <main id="container">
+    <div class="Header">
+      <img src="../image top.png"/>
+    </div>
+
+    <div id="tablink">
+      <nav>
+        <ul>
+          <li><a href="../../Home.html">Home</a></li>
+          <li><a href="AboutNYSL.html">About NYSL</a></li>
+          <li><a href="GameInformation.html">Game Information</a></li>
+          <li><a href="Rules.html">Rules</a></li>
+          <li><a href="Registration.html">Registration</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>          
+    </div>
+    <h1>Northside Youth Soccer League</h1>
+        <!--try to get it tidy, all in 1 view (didn't manage) -->
+      <h2>Please fill in the registration form below.</h2> <br>
+      <form method="POST" action="./registrationSend.html">    
+        <div class="middle">
+        <div id="Registration" class="tabcontent">
+        
+        <div class="firstName">  
+          <label for="firstName">Player's First Name:</label>
+          <input type="text" name="firstName" pattern="[A-Za-zÀ-ž-']{1,}" title="Acceptable characters: A-Z, a-z, À-ž, hyphen(-), apostrophe(')" required> 
+        </div>
+        <div class="lastName">
+          <label for="lastName">Last Name:</label>
+          <input type="text" name="lastName" pattern="[A-Za-zÀ-ž-']{1,}" title="Acceptable characters: A-Z, a-z, À-ž, hyphen(-), apostrophe(')" required> 
+        </div>
+        <div class="street">
+          <label for="street">Street Adress:</label>
+          <input type="text" name="street" pattern="[A-Za-z0-9-\s]{1,}" title="Acceptable characters: A-Z, a-z, 0-9, hyphen(-)" required>
+        </div>
+        <div class="city">
+          <label for="city">City:</label>
+          <input type="text" name="city" pattern="[A-Za-z-]{1,}" title="Acceptable characters: A-Z, a-z, hyphen(-)" required>
+        </div>
+        <div class="zip">  
+          <label for="zip">Zip Code:</label>
+          <input type="text" name="zip" pattern="[0-9]{5}" title="Acceptable characters: 0-9. Must be 5 characters" required>
+        </div>
+        <div class="dateOfBirth">
+          <label for="dateOfBirth">Birth Date:</label>
+          <input type="date" name="dateOfBirth" required>
+        </div>
+        <div class="gender">
+          <label for="gender">Gender:</label>
+          <input type="radio" name="gender" value="male" required>Male
+          <input type="radio" name="gender" value="female">Female
+          <input type="radio" name="gender" value="other">Other
+        </div>
+        <div class="grade">
+          <label for="grade">Grade:</label>
+          <input type="radio" name="grade" value="preschool" required>Pre-School
+          <input type="radio" name="grade" value="first">First Grade
+          <input type="radio" name="grade" value="second">Second Grade
+          <input type="radio" name="grade" value="third">Third Grade
+          <input type="radio" name="grade" value="fourth">Fourth Grade
+          <input type="radio" name="grade" value="fifth">Fifth Grade
+        </div>
+        <div class="parent">
+          <label for="parent">Parent/Guardian:</label>
+          <input type="text" name="parent" pattern="[A-Za-zÀ-ž-']{1,}" title="Acceptable characters: A-Z, a-z, À-ž, hyphen(-), apostrophe(')" required>
+        </div>
+        <div class="phone">
+          <label for="phone">Phone Number Parent/Guardian:</label>
+          <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Acceptable characters: 0-9. formatted as: 123-123-1234" required>
+        </div>
+        <div class="mail">
+          <label for="mail">E-Mail Parent/Guardian:</label>
+          <input type="email" name="mail" required>
+        </div>
+        <p>Which elementary schools do you live near?</p>
+        <div class="elementary">
+          <label for="elementary1">First Closest School:</label>
+          <select name="elementary1" required>
+            <option value="AJ Katzenmaier Elementary">AJ Katzenmaier Elementary</option>
+            <option value="Greenbay Elementary">Greenbay Elementary</option>
+            <option value="Howard A Yeager Elementary">Howard A Yeager Elementary</option>
+            <option value="Marjorie P Hart Elementary">Marjorie P Hart Elementary</option>
+            <option value="North Elementary">North Elementary</option>
+            <option value="South Elementary">South Elementary</option>
+          </select>
+          <label for="elementary2">Second Closest School:</label>
+          <select name="elementary2" required>
+            <option value="AJ Katzenmaier Elementary">AJ Katzenmaier Elementary</option>
+            <option value="Greenbay Elementary">Greenbay Elementary</option>
+            <option value="Howard A Yeager Elementary">Howard A Yeager Elementary</option>
+            <option value="Marjorie P Hart Elementary">Marjorie P Hart Elementary</option>
+            <option value="North Elementary">North Elementary</option>
+            <option value="South Elementary">South Elementary</option>
+          </select>
+        </div>
+        <div class="position">
+          <label for="position">What position(s) do you normally play? (check all that apply):</label>
+          <input type="checkbox" name="position" value="forward">Forward
+          <input type="checkbox" name="position" value="midfield">Midfield
+          <input type="checkbox" name="position" value="defense">Defense
+          <input type="checkbox" name="position" value="goalkeeper">Goalkeeper
+          <input type="checkbox" name="position" value="neverPlayed">Never played before
+        </div>
+        <div class="newPosition">
+          <label for="newPosition">What position(s) do you want to play? (check all that apply):</label>
+          <input type="checkbox" name="newPosition" value="forward">Forward
+          <input type="checkbox" name="newPosition" value="midfield">Midfield
+          <input type="checkbox" name="newPosition" value="defense">Defense
+          <input type="checkbox" name="newPosition" value="goalkeeper">Goalkeeper
+        </div>
+        <div class="jersey">
+          <label for="jersey">Jersey size:</label>
+          <select name="jersey" required>
+            <option value="noneRequired">Already Have a Jersey</option>
+            <option value="youthSmall">Youth Small</option>
+            <option value="youthMedium">Youth Medium</option>
+            <option value="youthLarge">Youth Large</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="extraLarge">Extra Large</option>
+          </select>
+        </div>
+        <div class="shorts">
+          <label for="shorts">Jersey size:</label>
+          <select name="shorts" required>
+            <option value="noneRequired">Already Have Shorts</option>
+            <option value="youthSmall">Youth Small</option>
+            <option value="youthMedium">Youth Medium</option>
+            <option value="youthLarge">Youth Large</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="extraLarge">Extra Large</option>            
+          </select>
+        </div>
+        <div class="disclaimer">
+          <p>
+            Permission to Play. <br>
+            I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Northside Youth Soccer League (NYSL).
+            In recognizing the possibility of physical injury associated with soccer and in consideration for the “League” accepting the registrant for its soccer programs and activities,
+            i hereby release, discharge, and/or otherwise indemnify NYSL, their employee and associated personnnel and volunteers, including the facilities used for practices and games,
+            against any claim by or on behalf of the registrant as a result of the registrants participation in the program and/or being transported to or from NYSL sponsored activities,
+            which trasnportation.<br> <br>
+            By signing below, I hereby agree and authorize the above. In addition, by signing below, I also acknowledge that I have read the cancellation policy and agree to its terms.
+          </p> <br>
+          <div class="signature">
+            <label for="signature">Parent/Guardian Full Name:</label>
+            <input type="text" name="signature" pattern="[A-Za-zÀ-ž-']{1,}" title="Acceptable characters: A-Z, a-z, À-ž, hyphen(-), apostrophe(')" required>
+          </div>
+          <div class="signatureDate">
+            <label for="signatureDate">Date:</label>
+            <input type="date" name="signatureDate" required>
+          </div>
+        </div>
+        <div class="submit">
+          <input type="submit" value="Send Registration Form">
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+    <div class="footer">
+      <img src="../image bottom.png"/>
+    </div>
+  </main>
+</div>
+  </body>
+
+</html>
